@@ -67,7 +67,7 @@ body{
     margin-bottom: 10px;
 }
 
-.form form .field input{
+.form form .field label{
     margin-bottom: 2px;
 }
 
@@ -92,7 +92,7 @@ body{
     margin-top: 13px;
     height: 46px;
     border: none;
-    font-size; 17px;
+    font-size: 17px;
     font-weight: 400;
     background: #333;
     color: #fff;
@@ -170,7 +170,7 @@ body{
     border-radius: 5px;
 }
 
-.user search {
+.user .search {
     margin: 20px 0;
     display: flex;
     position: relative;
@@ -182,9 +182,20 @@ body{
     font-size: 18px;
 }
 
+.users .search input{
+    position: relative;
+    height: 42px;
+    width: auto;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+}
+
 .users .search button{
-    width: 50px;
-    height: 25px;
+    width: 47px;
+    height: 42px;
     border: none;
     outline: none;
     color: #fff;
@@ -199,7 +210,7 @@ body{
     overflow-y: auto;
 }
 
-.users-list::-webkit-scrollbar{
+:is(.users-list, .chat-box)::-webkit-scrollbar{
     width: 0px;
 }
 
@@ -271,6 +282,10 @@ body{
     display: flex;
 }
 
+.chat-box .chat{
+    margin: 15px 0;
+}
+
 .chat-box .chat p{
     word-wrap: break-word;
     padding: 8px 16px;
@@ -313,4 +328,31 @@ body{
     color: #333;
     background: #ededed;
     border-radius: 18px 18px 18px 0;
+}
+
+.chat-area .typing-area{
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.typing-area input{
+    height: 45px;
+    width: calc(100% - 58px);
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.typing-area button{
+    width: 55px;
+    border: none;
+    outline: none;
+    background: #333;
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
 }
