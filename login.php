@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-        referrerpolicy="no-referrer" />
+        referrerpolicy="no-referrer" crossorigin="anonymous"/>
 
 </head>
 
@@ -26,15 +26,18 @@
                 <div class="field input">
                     <label>Password</label>
                     <input type="password" placeholder="Enter password">
-                  <!--  <i class="fa fa-eye"></i> -->
+                    <i class="fa fa-eye" aria-hidden="true"></i>
                 </div>
                 <div class="field button">
                     <input type="submit" placeholder="Continue to Chat">
                 </div>
             </form>
-            <div class="link">Not yet signed up? <a href="#">Sign now</a> </div>
+            <div class="link">Not yet signed up? <a href="index.php">Sign now</a> </div>
         </section>
     </div>
+
+    <script src="./js/pass-show-hide.js"></script>
+
 
 </body>
 
