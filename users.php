@@ -1,30 +1,27 @@
-<!DOCTYPE html>
-<html>
+<?php 
+    session_start();
+    if(!isset($_SESSION['unique_id'])){
+        header("location: login.php");
+    }
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>my_shoutbox</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-        referrerpolicy="no-referrer" crossorigin="anonymous" />
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
-</head>
-
+<?php include_once "header.php"; ?>
 <body>
     <div class="wrapper">
         <section class="users">
             <header>
+            <?php
+                include_once "php/config.php";
+                $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+                if(mysqli_num_rows($sql) > 0){
+                    $row = mysqli_fetch_assoc($sql);
+                }
+            ?>
                 <div class="content">
-                    <img src="user1.JPG" alt="">
+                    <img src="php/images/<?php echo $row['img'] ?>" alt="">
                     <div class="details">
-                        <span>Taskman</span>
-                        <p>Active</p>
+                        <span><?php echo $row['fname'] . " " . $row ['lname'] ?></span>
+                        <p><?php echo $row['status'] ?></p>
                     </div>
                 </div>
                 <a href="#" class="logout">Logout</a>
