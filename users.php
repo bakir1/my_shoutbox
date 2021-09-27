@@ -32,46 +32,7 @@
                 <button><i class="fas fa-search"></i></button>
             </div>
             <div class="users-list">
-                <a href="#">
-                    <div class="content">
-                        <img src="user1.JPG" alt="">
-                        <div class="details">
-                            <span>Boxman</span>
-                            <p>Test message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="user1.JPG" alt="">
-                        <div class="details">
-                            <span>Boxman</span>
-                            <p>Test message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="user1.JPG" alt="">
-                        <div class="details">
-                            <span>Boxman</span>
-                            <p>Test message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="user1.JPG" alt="">
-                        <div class="details">
-                            <span>Boxman</span>
-                            <p>Test message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
+              
             </div>
         </section>
     </div>
